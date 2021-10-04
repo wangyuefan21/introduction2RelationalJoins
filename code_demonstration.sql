@@ -69,6 +69,11 @@ INSERT INTO nba VALUES
 ('Brooklyn Nets', 'Los Angeles Lakers'),
 ('Milwaukee Bucks', 'Phoenix Suns');
 
+--check table
+SELECT
+	*
+FROM nba
+
 --cross join
 SELECT
 	t1.west,
