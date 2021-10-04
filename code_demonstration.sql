@@ -60,8 +60,8 @@ DROP TABLE IF EXISTS nba;
 
 --create table
 CREATE TABLE nba(
-	East VARCHAR,
-	West VARCHAR);
+	east VARCHAR,
+	west VARCHAR);
 
 --create data
 INSERT INTO nba VALUES
