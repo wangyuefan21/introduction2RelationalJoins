@@ -223,7 +223,7 @@ Sprite |
 La Croix |
 Iced Tea |
 
-If you want to see all the combinations of `food` and `drink` we can possibily get for your meal, you can use `CROSS JOIN`. `CROSS JOIN` would return all the possible combo you can get for your meal.
+If you want to see all the combinations of `food` and `drink` we can possibly get for your meal, you can use `CROSS JOIN`. We can pick your favorite meal combo from the results of `CROSS JOIN`.
 ```
 --cross join
 SELECT
