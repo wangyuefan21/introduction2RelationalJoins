@@ -53,7 +53,7 @@ CREATE TABLE score(
 
 -- Insert Data
 INSERT INTO score 
-VALUES (1, 92), 
+VALUES	(1, 92), 
 	(2, 88),
 	(3, 95),
 	(4, 68);
