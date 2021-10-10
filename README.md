@@ -32,8 +32,7 @@ CREATE TABLE student(
 
 -- Insert Data
 INSERT INTO student 
-VALUES
-	(1, 'Bob', 'M', 'class 1'), 
+VALUES	(1, 'Bob', 'M', 'class 1'), 
 	(2, 'Alice', 'F', 'class 1'), 
 	(3, 'Evi', 'F', 'class 2');
 ```
@@ -55,9 +54,9 @@ CREATE TABLE score(
 -- Insert Data
 INSERT INTO score 
 VALUES (1, 92), 
-	   (2, 88),
-	   (3, 95),
-	   (4, 68);
+	(2, 88),
+	(3, 95),
+	(4, 68);
 ```
 
  id | score
