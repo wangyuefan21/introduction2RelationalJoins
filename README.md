@@ -163,6 +163,8 @@ NULL | NULL | Peter | 68
 
 `Cross JOIN` etrieves the Cartesian product of both tables. This gives you the combination of all records from both tables. 
 
+<img src=figures/cross_join.png width=300>
+
 ### Example
 
 Since `Cross JOIN` is a little different from other `JOIN`s, we are going to use different example to illustrate.
