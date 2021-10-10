@@ -1,10 +1,10 @@
 # Introduction to Relational Joins 
 By: Alan Wang and Dominnic Chant
 
-This repository contains our final project for our MSDS 610: Communications for Analytics.
+This repository contains our final project for MSDS 610: Communications for Analytics.
 
 ## Introduction
-In the world of data science, people use SQL (Structured Query Languag) to interact with relational databases. Oftentimes, you need to access data across multiple tables. Imagine if you could only work with one table at a time, doing analysis or modeling would be extremely restricted and painful. Fortunately, this isn’t anything we have to worry about. The `JOIN` clause allows us to combine the columns from two or more tables based on shared column values. Once you learn the `JOIN` statement, you can start linking data together, which expands the possibility how you can explore data. We are going to introduce five different `JOIN`s here. They are `INNER JOIN`, `LEFT JOIN`, `RIGHT JOIN`, `FULL JOIN` and `CROSS JOIN`. 
+In the world of data science, people use SQL (Structured Query Language) to interact with relational databases. Oftentimes, you need to access data across multiple tables. Imagine if you could only work with one table at a time, doing analysis or modeling would be extremely restricted and painful. Fortunately, this isn’t anything we have to worry about. The `JOIN` clause allows us to combine the columns from two or more tables based on shared column values. Once you learn the `JOIN` statement, you can start linking data together, which expands the possibility of how you can explore data. We are going to introduce five different `JOIN`s here. They are `INNER JOIN`, `LEFT JOIN`, `RIGHT JOIN`, `FULL JOIN` and `CROSS JOIN`. 
 
 ## Inner Join
 
@@ -43,7 +43,7 @@ Alice | class 1
 Evi | class 2
 John | class 3
 
-`score` has all the students' test score.
+`score` has all the students' test scores.
 ```
 -- Insert Data
 INSERT INTO score 
@@ -59,6 +59,8 @@ Bob | 92
 Alice | 88
 Evi | 95
 Peter | 68
+
+`student` and `score` will be used for `LEFT JOIN`, `RIGHT JOIN` and `FULL JOIN` as well.
 
 ```
 -- Inner Join
@@ -119,7 +121,7 @@ RIGHT JOIN score
 ON student.name = score.student_name;
 ```
 
-`score` is the right table. The query would keey all records from `score` and find matches from `student`. Notice that `Peter` is not in `student`. Therefore, the query would not find a match for `Peter` and would have `NULL` in that row. 
+`score` is the right table. The query would keep all records from `score` and find matches from `student`. Notice that `Peter` is not in `student`. Therefore, the query would not find a match for `Peter` and would have `NULL` in that row. 
 
 name | class | student_name | score
 ------------- | ------------- | ------------- | ------------- 
@@ -154,3 +156,16 @@ Bob | class 1 | Bob | 92
 Evi | class 2 | Evi | 95
 John | class 2 | NULL | NULL
 NULL | NULL | Peter | 68
+
+## Cross Join
+
+### Concept
+
+`Cross JOIN` etrieves the Cartesian product of both tables. This gives you the combination of all records from both tables. 
+
+### Example
+
+Since `Cross JOIN` is a little different from other `JOIN`s, we are going to use different example to illustrate.
+
+Imagine you walk in a restaurant
+
