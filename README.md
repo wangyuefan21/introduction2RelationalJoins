@@ -69,7 +69,6 @@ Evi | 95
 Peter | 68
 
 `student` and `score` will be used for `LEFT JOIN`, `RIGHT JOIN` and `FULL JOIN` as well.
-
 ```
 -- Inner Join
 SELECT *
@@ -199,7 +198,6 @@ INSERT INTO drink VALUES
 ```
 
 This is their `food` menu:
-
 ```
 SELECT * 
 FROM food;
@@ -217,11 +215,35 @@ SELECT *
 FROM drink;
 ```
 
-food |
+drink |
 ------------- |
 Coke |
 Sprite |
 La Croix |
 Iced Tea |
 
-You want to see what are all the combination of `food` and `dring` we can have to make a meal. That's when you can use `CROSS JOIN`
+You want to see what are all the combination of `food` and `dring` we can have to make a meal. That's when you can use `CROSS JOIN`.
+```
+--cross join
+SELECT
+	*
+FROM food
+CROSS JOIN drink;
+```
+
+`CROSS JOIN` would return all the possible combo you can get for your meal.
+
+food | drink
+------------- | -------------
+Cheeseburger | Coke 
+Cheeseburger | Sprite
+Cheeseburger | La Croix
+Cheeseburger | Iced Tea
+Fried Rice | Coke 
+Fried Rice | Sprite
+Fried Rice | La Croix
+Fried Rice | Iced Tea
+Fish Taco | Coke 
+Fish Taco | Sprite
+Fish Taco | La Croix
+Fish Taco | Iced Tea
