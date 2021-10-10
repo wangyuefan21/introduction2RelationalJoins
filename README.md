@@ -19,9 +19,6 @@ In the world of data science, people use SQL (Structured Query Languag) to inter
 ### Example
 
 Create two tables `student` and `score`.
-
-`student` has all the students' information. 
-
 ```
 -- Create Table
 CREATE TABLE student(
@@ -29,6 +26,13 @@ CREATE TABLE student(
 	name VARCHAR,
 	class VARCHAR);
 
+CREATE TABLE score(
+	student_id INTEGER,
+	score INTEGER);
+```
+
+`student` has all the students' information. 
+```
 -- Insert Data
 INSERT INTO student 
 VALUES	(1, 'Bob', 'class 1'), 
@@ -45,13 +49,7 @@ VALUES	(1, 'Bob', 'class 1'),
 4 | John | class 3
 
 `score` has all the students' test score.
-
 ```
--- Create Table
-CREATE TABLE score(
-	student_id INTEGER,
-	score INTEGER);
-
 -- Insert Data
 INSERT INTO score 
 VALUES	(1, 92), 
