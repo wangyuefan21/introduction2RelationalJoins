@@ -18,16 +18,28 @@ In the world of data science, people use SQL (Structured Query Languag) to inter
 
 ### Example
 
-Have two tables `student` and `score`.
+Create two tables `student` and `score`.
 
 `student` has all the students' information. 
+
+```
+CREATE TABLE student(
+	id INTEGER,
+	name VARCHAR,
+	gender VARCHAR,
+	class VARCHAR);
+
+INSERT INTO student 
+VALUES (1, 'Bob', 'M', 'class 1'), 
+	   (2, 'Alice', 'F', 'class 1'), 
+	   (3, 'Evi', 'F', 'class 2');
+```
 
  id | name | gender | class
 ------------ | ------------- | ------------- | -------------
 1 | Bob | M | Class 1
 2 | Alice | F | Class 1
-3 | John | M | Class 2
-4 | Evi | F | Class 3
+3 | Evi | F | Class 2
 
 `score` has all the students' test score.
 
@@ -35,6 +47,6 @@ Have two tables `student` and `score`.
 ------------ | -------------
 1 | 92
 2 | 88
-3 | 79
-4 | 95
-5 | 75
+3 | 95
+4 | 68
+
