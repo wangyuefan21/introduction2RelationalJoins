@@ -16,7 +16,7 @@ In the world of data science, people use SQL (Structured Query Language) to inte
 ### Example
 Create two tables `student` and `score`.
 ```
--- Create Table
+-- Create Tables
 CREATE TABLE student(
 	name VARCHAR,
 	class VARCHAR);
@@ -90,8 +90,8 @@ Evi | class 2 | Evi | 95
 ```
 -- Left Join
 SELECT *
-FROM student
-LEFT JOIN score
+FROM student -- this is left table
+LEFT JOIN score -- this is right table
 ON student.name = score.student_name;
 ```
 
@@ -116,8 +116,8 @@ John | class 2 | NULL | NULL
 ```
 -- Right Join
 SELECT *
-FROM student
-RIGHT JOIN score
+FROM student -- this is left table
+RIGHT JOIN score -- this is right table
 ON student.name = score.student_name;
 ```
 
@@ -161,7 +161,7 @@ NULL | NULL | Peter | 68
 
 ### Concept
 
-`Cross JOIN` etrieves the Cartesian product of both tables. This gives you the combination of all records from both tables. 
+`Cross JOIN` etrieves the Cartesian product of both tables. Basically, this gives you the combination of all records from both tables. Since it returns all combination, `Cross JOIN` doesn't require any join condition.
 
 <img src=figures/cross_join.png width=300>
 
