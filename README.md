@@ -22,7 +22,6 @@ Create two tables `student` and `score`.
 ```
 -- Create Table
 CREATE TABLE student(
-	id INTEGER,
 	name VARCHAR,
 	class VARCHAR);
 
@@ -73,12 +72,12 @@ INNER JOIN score
 ON student.name = score.student_name;
 ```
 
-`INNER JOIN` returns records that are in both tables you join with. Notice that `id = 4` is not in `score` table and `id = 5` is not in `student` table. Therefore, the query returns the following results:
+`INNER JOIN` returns records that are in both tables you join with. Notice that `John` is not in `score` table and `Peter` is not in `student` table. Therefore, those records would be ignored and the query returns the following results:
 
- id | name | class | student_id | score
------------- | ------------- | ------------- | ------------- | ------------- 
-1 | Bob | class 1 | 1 | 92
-2 | Alice | class 1 | 2| 88
-3 | Evi | class 2 | 3| 95
+name | class | student_name | score
+------------- | ------------- | ------------- | ------------- 
+Bob | class 1 | Bob | 92
+Alice | class 1 | Alice | 88
+Evi | class 2 | Evi | 95
 
 
