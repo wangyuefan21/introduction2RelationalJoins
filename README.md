@@ -101,3 +101,29 @@ Alice | class 1 | Alice | 88
 Bob | class 1 | Bob | 92
 Evi | class 2 | Evi | 95
 John | class 2 | null | null
+
+## Right Join
+
+### Concept
+
+`RIGHT JOIN` is very similar to `LEFT JOIN`, but does the inverse. It will all records from the right (second) table and only those that have a match from the left (first) table.
+
+<img src=figures/left_join.png width=300>
+
+### Example
+```
+-- Right Join
+SELECT *
+FROM student
+RIGHT JOIN score
+ON student.name = score.student_name;
+```
+
+The right table here is `score`. The query would find matches from `student`. Notice that `Peter` is not in `student`. Therefore, the query would not find a match for `Peter` and would have `null` in that row. 
+
+name | class | student_name | score
+------------- | ------------- | ------------- | ------------- 
+Alice | class 1 | Alice | 88
+Bob | class 1 | Bob | 92
+Evi | class 2 | Evi | 95
+null | null | Peter | 68
