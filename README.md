@@ -175,9 +175,7 @@ NULL | NULL | Peter | 68
 
 ### Example
 
-Since `Cross JOIN` is a little different from other `JOIN`s, we are going to use different example to illustrate.
-
-Imagine you walk in a restaurant that you need to pick a `food` option and a `drink` option to make a meal.
+Since `Cross JOIN` is a little different from other `JOIN`s, we are going to use different example to illustrate it. Imagine you walk in a restaurant that you need to pick a `food` option and a `drink` option to make a meal.
 
 ```
 -- Create Tables
@@ -212,3 +210,18 @@ food |
 Cheeseburger |
 Fried Rice |
 Fish Taco |
+
+This is their `drink` menu:
+```
+SELECT * 
+FROM drink;
+```
+
+food |
+------------- |
+Coke |
+Sprite |
+La Croix |
+Iced Tea |
+
+You want to see what are all the combination of `food` and `dring` we can have to make a meal. That's when you can use `CROSS JOIN`
