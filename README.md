@@ -168,13 +168,13 @@ NULL | NULL | Peter | 68
 
 ### Concept
 
-`Cross JOIN` etrieves the Cartesian product of both tables. Basically, this gives you the combination of all records from both tables. Since it returns all combination, `Cross JOIN` doesn't require any join condition.
+`Cross JOIN` retrieves the Cartesian product of both tables. Basically, this gives you the combination of all records from both tables. Since it returns all combinations, `Cross JOIN` doesn't require any join condition.
 
 <img src=figures/cross_join.png width=300>
 
 ### Example
 
-Since `Cross JOIN` is a little different from other `JOIN`s, we are going to use different example to illustrate it. Imagine you walk in a restaurant that you need to pick a `food` option and a `drink` option to make a meal.
+Since `Cross JOIN` is a little different from other `JOIN`s, we are going to use a different example to illustrate it. Imagine you walk in a restaurant and you need to pick a `food` option and a `drink` option to make a meal.
 
 ```
 -- Create Tables
@@ -197,7 +197,7 @@ INSERT INTO drink VALUES
 ('Iced Tea');
 ```
 
-This is their `food` menu:
+This is the `food` menu:
 ```
 SELECT * 
 FROM food;
@@ -209,7 +209,7 @@ Cheeseburger |
 Fried Rice |
 Fish Taco |
 
-This is their `drink` menu:
+This is the `drink` menu:
 ```
 SELECT * 
 FROM drink;
@@ -222,7 +222,7 @@ Sprite |
 La Croix |
 Iced Tea |
 
-You want to see what are all the combination of `food` and `dring` we can have to make a meal. That's when you can use `CROSS JOIN`.
+If you want to see all the combinations of `food` and `drink` we can have for your meal, you can use `CROSS JOIN`.
 ```
 --cross join
 SELECT
@@ -247,3 +247,8 @@ Fish Taco | Coke
 Fish Taco | Sprite
 Fish Taco | La Croix
 Fish Taco | Iced Tea
+
+## Summary and Conclusion
+
+
+
