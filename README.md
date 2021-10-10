@@ -106,9 +106,9 @@ John | class 2 | null | null
 
 ### Concept
 
-`RIGHT JOIN` is very similar to `LEFT JOIN`, but does the inverse. It will all records from the right (second) table and only those that have a match from the left (first) table.
+`RIGHT JOIN` is very similar to `LEFT JOIN`, but does the inverse. It will return all records from the right (second) table and only those that have a match from the left (first) table.
 
-<img src=figures/left_join.png width=300>
+<img src=figures/right_join.png width=300>
 
 ### Example
 ```
@@ -119,7 +119,7 @@ RIGHT JOIN score
 ON student.name = score.student_name;
 ```
 
-The right table here is `score`. The query would find matches from `student`. Notice that `Peter` is not in `student`. Therefore, the query would not find a match for `Peter` and would have `null` in that row. 
+`score` is the right table. The query would keey all records from `score` and find matches from `student`. Notice that `Peter` is not in `student`. Therefore, the query would not find a match for `Peter` and would have `null` in that row. 
 
 name | class | student_name | score
 ------------- | ------------- | ------------- | ------------- 
