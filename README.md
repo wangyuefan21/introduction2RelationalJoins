@@ -93,7 +93,7 @@ LEFT JOIN score
 ON student.name = score.student_name;
 ```
 
-Notice that `Peter` is not in `student`, which is the left table in this query. Therefore, this record would be ignored. Additionally, since `John` is not in `score`, the query would not find a match in the right table and would leave null value in the corresponding columns.
+The query would keep all the records from `student` and find matches in `score`. Notice that `John` is not in `score`, the query would not find a match from the right table and would leave null value in the corresponding columns.
 
 name | class | student_name | score
 ------------- | ------------- | ------------- | ------------- 
