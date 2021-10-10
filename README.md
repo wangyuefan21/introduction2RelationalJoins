@@ -23,16 +23,19 @@ Create two tables `student` and `score`.
 `student` has all the students' information. 
 
 ```
+-- Create Table
 CREATE TABLE student(
 	id INTEGER,
 	name VARCHAR,
 	gender VARCHAR,
 	class VARCHAR);
 
+-- Insert Data
 INSERT INTO student 
-VALUES (1, 'Bob', 'M', 'class 1'), 
-	   (2, 'Alice', 'F', 'class 1'), 
-	   (3, 'Evi', 'F', 'class 2');
+VALUES
+	(1, 'Bob', 'M', 'class 1'), 
+	(2, 'Alice', 'F', 'class 1'), 
+	(3, 'Evi', 'F', 'class 2');
 ```
 
  id | name | gender | class
@@ -42,6 +45,20 @@ VALUES (1, 'Bob', 'M', 'class 1'),
 3 | Evi | F | Class 2
 
 `score` has all the students' test score.
+
+```
+-- Create Table
+CREATE TABLE score(
+	student_id INTEGER,
+	score INTEGER);
+
+-- Insert Data
+INSERT INTO score 
+VALUES (1, 92), 
+	   (2, 88),
+	   (3, 95),
+	   (4, 68);
+```
 
  id | score
 ------------ | -------------
