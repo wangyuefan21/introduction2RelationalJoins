@@ -4,7 +4,7 @@ By: Alan Wang and Dominnic Chant
 This repository contains our final project for MSDS 610: Communications for Analytics.
 
 ## Introduction
-In the world of data science, people use SQL (Structured Query Language) to interact with relational databases. Oftentimes, you need to access data across multiple tables. Imagine if you could only work with one table at a time, doing analysis or modeling would be extremely restricted and painful. Fortunately, this isn’t anything we have to worry about. The `JOIN` clause allows us to combine the columns from two or more tables based on shared column values. Once you learn the `JOIN` statement, you can start linking data together, which expands the possibility of how you can explore data. We are going to introduce five different `JOIN`s here. They are `INNER JOIN`, `LEFT JOIN`, `RIGHT JOIN`, `FULL JOIN` and `CROSS JOIN`. 
+In the world of data science, people use SQL (Structured Query Language) to interact with relational databases. Oftentimes, you need to access data across multiple tables. Imagine if you could only work with one table at a time, doing analysis or modeling would be extremely restricted and painful. Fortunately, this isn’t anything we have to worry about. The `JOIN` clause allows us to combine the columns from two or more tables based on shared column values. Once you learn the `JOIN` statement, you can start linking data together, which expands the possibility of how you can explore data. We are going to introduce five different `JOIN`s. They are `INNER JOIN`, `LEFT JOIN`, `RIGHT JOIN`, `FULL JOIN` and `CROSS JOIN`. 
 
 ## Inner Join
 
@@ -14,7 +14,9 @@ In the world of data science, people use SQL (Structured Query Language) to inte
 <img src=figures/inner_join.png width=300>
 
 ### Example
-Create two tables `student` and `score`.
+We are going to use an example to illustrate how `INNER JOIN` works. This example will be further developed for `LEFT JOIN`, `RIGHT JOIN` and `FULL JOIN` as well. 
+
+Create two tables called `student` and `score`.
 ```
 -- Create Tables
 CREATE TABLE student(
@@ -68,7 +70,6 @@ Alice | 88
 Evi | 95
 Peter | 68
 
-`student` and `score` will be used for `LEFT JOIN`, `RIGHT JOIN` and `FULL JOIN` as well.
 ```
 -- Inner Join
 SELECT *
