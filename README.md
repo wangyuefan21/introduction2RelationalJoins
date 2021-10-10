@@ -29,11 +29,15 @@ CREATE TABLE score(
 `student` has all the students' information. 
 ```
 -- Insert Data
-INSERT INTO student 
-VALUES	('Bob', 'class 1'), 
+INSERT INTO student VALUES	
+	('Bob', 'class 1'), 
 	('Alice', 'class 1'), 
 	('Evi', 'class 2'),
 	('John', 'class 3');
+
+-- Check Table
+SELECT * 
+FROM student;
 ```
 
 name | class
@@ -46,11 +50,15 @@ John | class 3
 `score` has all the students' test scores.
 ```
 -- Insert Data
-INSERT INTO score 
-VALUES	('Bob', 92), 
+INSERT INTO score VALUES	
+	('Bob', 92), 
 	('Alice', 88),
 	('Evi', 95),
 	('Peter', 68);
+
+-- Check Table
+SELECT * 
+FROM score;
 ```
 
  student_name | score
@@ -90,8 +98,8 @@ Evi | class 2 | Evi | 95
 ```
 -- Left Join
 SELECT *
-FROM student -- this is left table
-LEFT JOIN score -- this is right table
+FROM student -- this is the "left" table
+LEFT JOIN score -- this is the "right" table
 ON student.name = score.student_name;
 ```
 
@@ -116,8 +124,8 @@ John | class 2 | NULL | NULL
 ```
 -- Right Join
 SELECT *
-FROM student -- this is left table
-RIGHT JOIN score -- this is right table
+FROM student -- this is the "left" table
+RIGHT JOIN score -- this is the "right" table
 ON student.name = score.student_name;
 ```
 
@@ -169,5 +177,38 @@ NULL | NULL | Peter | 68
 
 Since `Cross JOIN` is a little different from other `JOIN`s, we are going to use different example to illustrate.
 
-Imagine you walk in a restaurant
+Imagine you walk in a restaurant that you need to pick a `food` option and a `drink` option to make a meal.
 
+```
+-- Create Tables
+CREATE TABLE food(
+	food VARCHAR);
+
+CREATE TABLE drink(
+	drink VARCHAR);
+
+-- Insert data
+INSERT INTO food VALUES
+('Cheeseburger'),
+('Fried Rice'),
+('Fish Taco');
+
+INSERT INTO drink VALUES
+('Coke'),
+('Sprite'),
+('La Croix'),
+('Iced Tea');
+```
+
+This is their `food` menu:
+
+```
+SELECT * 
+FROM food;
+```
+
+food |
+------------- |
+Cheeseburger |
+Fried Rice |
+Fish Taco |
