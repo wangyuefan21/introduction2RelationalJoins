@@ -1,10 +1,10 @@
 # Introduction to Relational Joins 
 By: Alan Wang and Dominnic Chant
 
-This repository contains our final project for our MSDS 610: Communications for Analytics course.
+This repository contains our final project for our MSDS 610: Communications for Analytics.
 
 ## Introduction
-In the world of data science, people use SQL (Structured Query Languag) to interact with relational databases. Oftentimes, you need to access data across multiple tables. Imagine if you could only work with one table at a time, it would be extremely restricted and painful. Fortunately, this isn’t anything we have to worry about. The `JOIN` clause allows us to combine the columns from two or more tables based on shared column values. Once you learn the `JOIN` statement, you can start linking data together, which expands the possibility how you can explore data. We are going to introduce five different `JOIN`s here. They are `INNER JOIN`, `LEFT JOIN`, `RIGHT JOIN`, `FULL JOIN` and `CROSS JOIN`. 
+In the world of data science, people use SQL (Structured Query Languag) to interact with relational databases. Oftentimes, you need to access data across multiple tables. Imagine if you could only work with one table at a time, doing analysis or modeling would be extremely restricted and painful. Fortunately, this isn’t anything we have to worry about. The `JOIN` clause allows us to combine the columns from two or more tables based on shared column values. Once you learn the `JOIN` statement, you can start linking data together, which expands the possibility how you can explore data. We are going to introduce five different `JOIN`s here. They are `INNER JOIN`, `LEFT JOIN`, `RIGHT JOIN`, `FULL JOIN` and `CROSS JOIN`. 
 
 ## Inner Join
 
@@ -65,7 +65,7 @@ Peter | 68
 SELECT *
 FROM student
 INNER JOIN score
-ON student.name = score.student_name;
+ON student.name = score.student_name; -- this is the join condition
 ```
 
 `INNER JOIN` returns records that are in both tables you join with. Notice that `John` is not in `score` and `Peter` is not in `student`. Therefore, those records would be ignored and the query returns the following results:
@@ -93,14 +93,14 @@ LEFT JOIN score
 ON student.name = score.student_name;
 ```
 
-The query would keep all the records from `student` and find matches in `score`. Notice that `John` is not in `score`, the query would not find a match for that record and would leave `null` value there.
+The query would keep all the records from `student` and find matches in `score`. Notice that `John` is not in `score`, the query would not find a match for that record and would leave `NULL` there.
 
 name | class | student_name | score
 ------------- | ------------- | ------------- | ------------- 
 Alice | class 1 | Alice | 88
 Bob | class 1 | Bob | 92
 Evi | class 2 | Evi | 95
-John | class 2 | null | null
+John | class 2 | NULL | NULL
 
 ## Right Join
 
@@ -119,11 +119,38 @@ RIGHT JOIN score
 ON student.name = score.student_name;
 ```
 
-`score` is the right table. The query would keey all records from `score` and find matches from `student`. Notice that `Peter` is not in `student`. Therefore, the query would not find a match for `Peter` and would have `null` in that row. 
+`score` is the right table. The query would keey all records from `score` and find matches from `student`. Notice that `Peter` is not in `student`. Therefore, the query would not find a match for `Peter` and would have `NULL` in that row. 
 
 name | class | student_name | score
 ------------- | ------------- | ------------- | ------------- 
 Alice | class 1 | Alice | 88
 Bob | class 1 | Bob | 92
 Evi | class 2 | Evi | 95
-null | null | Peter | 68
+NULL | NULL | Peter | 68
+
+## FULL Join
+
+### Concept
+
+`FULL JOIN` is essentially the combination of a `LEFT JOIN` and a `RIGHT JOIN`. The result set will include all rows from both tables, populating the columns with table values when possible or with `NULL`s when there is no match in the counterpart table. 
+
+<img src=figures/full_join.png width=300>
+
+### Example
+```
+-- Full Join
+SELECT *
+FROM student
+FULL JOIN score
+ON student.name = score.student_name;
+```
+
+This is the query results:
+
+name | class | student_name | score
+------------- | ------------- | ------------- | ------------- 
+Alice | class 1 | Alice | 88
+Bob | class 1 | Bob | 92
+Evi | class 2 | Evi | 95
+John | class 2 | NULL | NULL
+NULL | NULL | Peter | 68
