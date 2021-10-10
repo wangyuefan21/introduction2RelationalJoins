@@ -1,5 +1,5 @@
-# msds610_final_project
+# Introduction to Relational Joins 
 
 
 
-<img src=figures/inner_join.png width=800>
+<img src=figures/inner_join.png width=200>
