@@ -35,42 +35,42 @@ CREATE TABLE score(
 ```
 -- Insert Data
 INSERT INTO student 
-VALUES	(1, 'Bob', 'class 1'), 
-	(2, 'Alice', 'class 1'), 
-	(3, 'Evi', 'class 2'),
-	(4, 'John', 'class 3');
+VALUES	('Bob', 'class 1'), 
+	('Alice', 'class 1'), 
+	('Evi', 'class 2'),
+	('John', 'class 3');
 ```
 
- id | name | class
------------- | ------------- | ------------- 
-1 | Bob | class 1
-2 | Alice | class 1
-3 | Evi | class 2
-4 | John | class 3
+name | class
+------------- | ------------- 
+Bob | class 1
+Alice | class 1
+Evi | class 2
+John | class 3
 
 `score` has all the students' test score.
 ```
 -- Insert Data
 INSERT INTO score 
-VALUES	(1, 92), 
-	(2, 88),
-	(3, 95),
-	(5, 68);
+VALUES	('Bob', 92), 
+	('Alice', 88),
+	('Evi', 95),
+	('Peter', 68);
 ```
 
- id | score
+ student_name | score
 ------------ | -------------
-1 | 92
-2 | 88
-3 | 95
-5 | 68
+Bob | 92
+Alice | 88
+Evi | 95
+Peter | 68
 
 ```
 -- Inner Join
 SELECT *
 FROM student
 INNER JOIN score
-ON student.id = score.student_id;
+ON student.name = score.student_name;
 ```
 
 `INNER JOIN` returns records that are in both tables you join with. Notice that `id = 4` is not in `score` table and `id = 5` is not in `student` table. Therefore, the query returns the following results:
