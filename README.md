@@ -78,7 +78,7 @@ INNER JOIN score
 ON student.name = score.student_name; -- this is the join condition
 ```
 
-`INNER JOIN` returns records that are in both tables you join with. Notice that `John` is not in `score` and `Peter` is not in `student`. Therefore, those records would be ignored and the query returns the following results:
+`INNER JOIN` returns records that are in both tables you join. Notice that `John` is not in `score` and `Peter` is not in `student`. Therefore, those records would be ignored and the query returns the following results:
 
 name | class | student_name | score
 ------------- | ------------- | ------------- | ------------- 
@@ -90,7 +90,7 @@ Evi | class 2 | Evi | 95
 
 ### Concept
 
-`LEFT JOIN` will return all records from the left table (i.e. the table you list first in the `JOIN`) and only matching records from the right (i.e. second) table.
+`LEFT JOIN` will return all records from the left table (i.e. the table you list first in the `JOIN`) and only match records from the right (i.e. second) table.
 
 <img src=figures/left_join.png width=300>
 
@@ -103,7 +103,7 @@ LEFT JOIN score -- this is the "right" table
 ON student.name = score.student_name;
 ```
 
-The query would keep all the records from `student` and find matches in `score`. Notice that `John` is not in `score`, the query would not find a match for that record and would leave `NULL` there.
+The query would keep all the records from `student` and find matches in `score`. Notice that `John` is not in `score`, so it would not find a match and would leave `NULL` value.
 
 name | class | student_name | score
 ------------- | ------------- | ------------- | ------------- 
@@ -129,7 +129,7 @@ RIGHT JOIN score -- this is the "right" table
 ON student.name = score.student_name;
 ```
 
-`score` is the right table. The query would keep all records from `score` and find matches from `student`. Notice that `Peter` is not in `student`. Therefore, the query would not find a match for `Peter` and would have `NULL` in that row. 
+`score` is the right table. The query would keep all records from `score` and find matches from `student`. Notice that `Peter` is not in `student`. Therefore, doing `RIGHT JOIN` would not find a match for `Peter` and would have `NULL` in that row. 
 
 name | class | student_name | score
 ------------- | ------------- | ------------- | ------------- 
@@ -175,7 +175,7 @@ NULL | NULL | Peter | 68
 
 ### Example
 
-Since `Cross JOIN` is a little different from other `JOIN`s, we are going to use a different example to illustrate it. Imagine you walk in a restaurant and you need to pick a `food` option and a `drink` option to make a meal.
+Since `Cross JOIN` is a little different from other `JOIN`s, we are going to use a different example to illustrate it. Imagine you walk in a restaurant and you need to pick a `food` and a `drink` to make a meal.
 
 ```
 -- Create Tables
@@ -223,7 +223,7 @@ Sprite |
 La Croix |
 Iced Tea |
 
-If you want to see all the combinations of `food` and `drink` we can have for your meal, you can use `CROSS JOIN`.
+If you want to see all the combinations of `food` and `drink` we can possibily get for your meal, you can use `CROSS JOIN`. `CROSS JOIN` would return all the possible combo you can get for your meal.
 ```
 --cross join
 SELECT
@@ -231,8 +231,6 @@ SELECT
 FROM food
 CROSS JOIN drink;
 ```
-
-`CROSS JOIN` would return all the possible combo you can get for your meal.
 
 food | drink
 ------------- | -------------
