@@ -254,7 +254,7 @@ Maybe I want to only see the scores of students in class 1, then I would need to
 
 Maybe I want to only see the food and drink combo for cheeseburger, then I would have to first query from the food table to only have cheeseburgers, before joining. 
 
-There an infinite number of ways to combine sets of date and we can use joins to help us put together a clean and concise dataset ready for analysis. 
+There an infinite number of ways to combine sets of data and we can use joins to help us put together a clean and concise dataset ready for analysis. 
 
 
 
