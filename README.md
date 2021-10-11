@@ -169,7 +169,7 @@ NULL | NULL | Peter | 68
 
 ### Concept
 
-`CROSS JOIN` retrieves the Cartesian product of both tables. Basically, this gives you the combination of all records from both tables. Since it returns all combinations, `Cross JOIN` doesn't require any join condition.
+`CROSS JOIN` retrieves the Cartesian product of both tables. Basically, this gives you the combination of all records from both tables. Since it returns all combinations, `CROSS JOIN` doesn't require any join condition.
 
 <img src=figures/cross_join.png width=300>
 
@@ -248,10 +248,13 @@ Fish Taco | La Croix
 Fish Taco | Iced Tea
 
 ## Summary
-In conclusion, `JOINS` is a simple and efficient way to combine two tables of data together. Specifically, `CROSS JOIN` is extremely applicable to cases where you might want to see every possible combination of rows between two tables, whereas `INNER JOIN`, `FULL JOIN`, `LEFT JOIN`, and `RIGHT JOIN`, are good for combining two sets of data together through some common key. What is the next step now that we know how to join two sets of data? In general it can be in the form of using two or more distinct tables or even using a more advanced technique called sub-querying where you combine queries together instead of the original tables. 
+In conclusion, `JOIN` is a simple and efficient way to combine two tables of data together. Specifically, `CROSS JOIN` is extremely applicable to cases where you might want to see every possible combination of rows between two tables, whereas `INNER JOIN`, `FULL JOIN`, `LEFT JOIN`, and `RIGHT JOIN`, are good for combining two sets of data together through some common key. What is the next step now that we know how to join two sets of data? In general it can be in the form of using two or more distinct tables or even using a more advanced technique called sub-querying where you combine queries together instead of the original tables. 
+
 Maybe I want to only see the scores of students in class 1, then I would need to join the score table to the student table where it's only the students from class 1. 
+
 Maybe I want to only see the food and drink combo for cheeseburger, then I would have to first query from the food table to only have cheeseburgers, before joining. 
-There an infinite number of ways to combine sets of date and we can use joins to help us put together a clean and concise ready for analysis. 
+
+There an infinite number of ways to combine sets of date and we can use joins to help us put together a clean and concise dataset ready for analysis. 
 
 
 
