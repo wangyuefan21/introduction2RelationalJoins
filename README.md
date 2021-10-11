@@ -6,7 +6,7 @@ This repository contains our final project for MSDS 610: Communications for Anal
 ## Introduction
 In the world of data science, people use SQL (Structured Query Language) to interact with relational databases. Oftentimes, you need to access data across multiple tables. Imagine if you could only work with one table at a time, doing analysis or modeling would be extremely restricted and painful. Fortunately, this isn’t anything we have to worry about. The `JOIN` clause allows us to combine the columns from two or more tables based on shared column values. Once you learn the `JOIN` statement, you can start linking data together, which expands the possibility of how you can explore data. We are going to introduce five different `JOIN`s. They are `INNER JOIN`, `LEFT JOIN`, `RIGHT JOIN`, `FULL JOIN` and `CROSS JOIN`. 
 
-## Inner Join
+## INNER JOIN
 
 ### Concept
 `INNER JOIN` returns records that have a match in both tables based on the join condition.
@@ -86,7 +86,7 @@ Alice | class 1 | Alice | 88
 Bob | class 1 | Bob | 92
 Evi | class 2 | Evi | 95
 
-## Left Join
+## LEFT JOIN
 
 ### Concept
 
@@ -112,7 +112,7 @@ Bob | class 1 | Bob | 92
 Evi | class 2 | Evi | 95
 John | class 2 | NULL | NULL
 
-## Right Join
+## RIGHT JOIN
 
 ### Concept
 
@@ -138,7 +138,7 @@ Bob | class 1 | Bob | 92
 Evi | class 2 | Evi | 95
 NULL | NULL | Peter | 68
 
-## FULL Join
+## FULL JOIN
 
 ### Concept
 
@@ -165,17 +165,17 @@ Evi | class 2 | Evi | 95
 John | class 2 | NULL | NULL
 NULL | NULL | Peter | 68
 
-## Cross Join
+## CROSS JOIN
 
 ### Concept
 
-`Cross JOIN` retrieves the Cartesian product of both tables. Basically, this gives you the combination of all records from both tables. Since it returns all combinations, `Cross JOIN` doesn't require any join condition.
+`CROSS JOIN` retrieves the Cartesian product of both tables. Basically, this gives you the combination of all records from both tables. Since it returns all combinations, `Cross JOIN` doesn't require any join condition.
 
 <img src=figures/cross_join.png width=300>
 
 ### Example
 
-Since `Cross JOIN` is a little different from other `JOIN`s, we are going to use a different example to illustrate it. Imagine you walk in a restaurant and you need to pick a `food` and a `drink` to make a meal.
+Since `CROSS JOIN` is a little different from other `JOIN`s, we are going to use a different example to illustrate it. Imagine you walk in a restaurant and you need to pick a `food` and a `drink` to make a meal.
 
 ```
 -- Create Tables
@@ -248,7 +248,7 @@ Fish Taco | La Croix
 Fish Taco | Iced Tea
 
 ## Summary
-In conclusion, joins is a simple and efficient way to combine two tables of data together. Specifically, `Cross JOIN` is extremely applicable to cases where you might want to see every possible combination of rows between two tables, whereas `Inner JOIN`, `Full JOIN`, `Left JOIN`, and `Right JOIN`, are good for combining two sets of data together through some common key. What is the next step now that we know how to join two sets of data? In general it can be in the form of using two or more distinct tables or even using a more advanced technique called sub-querying where you combine queries together instead of the original tables. 
+In conclusion, `JOINS` is a simple and efficient way to combine two tables of data together. Specifically, `CROSS JOIN` is extremely applicable to cases where you might want to see every possible combination of rows between two tables, whereas `INNER JOIN`, `FULL JOIN`, `LEFT JOIN`, and `RIGHT JOIN`, are good for combining two sets of data together through some common key. What is the next step now that we know how to join two sets of data? In general it can be in the form of using two or more distinct tables or even using a more advanced technique called sub-querying where you combine queries together instead of the original tables. 
 Maybe I want to only see the scores of students in class 1, then I would need to join the score table to the student table where it's only the students from class 1. 
 Maybe I want to only see the food and drink combo for cheeseburger, then I would have to first query from the food table to only have cheeseburgers, before joining. 
 There an infinite number of ways to combine sets of date and we can use joins to help us put together a clean and concise ready for analysis. 
