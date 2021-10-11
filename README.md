@@ -247,7 +247,12 @@ Fish Taco | Sprite
 Fish Taco | La Croix
 Fish Taco | Iced Tea
 
-## Summary and Conclusion
+## Summary
+In conclusion, joins is a simple and efficient way to combine two tables of data together. Specifically, `Cross JOIN` is extremely applicable to cases where you might want to see every possible combination of rows between two tables, whereas `Inner JOIN`, `Full JOIN`, `Left JOIN`, and `Right JOIN`, are good for combining two sets of data together through some common key. What is the next step now that we know how to join two sets of data? In general it can be in the form of using two or more distinct tables or even using a more advanced technique called sub-querying where you combine queries together instead of the original tables. 
+Maybe I want to only see the scores of students in class 1, then I would need to join the score table to the student table where it's only the students from class 1. 
+Maybe I want to only see the food and drink combo for cheeseburger, then I would have to first query from the food table to only have cheeseburgers, before joining. 
+There an infinite number of ways to combine sets of date and we can use joins to help us put together a clean and concise ready for analysis. 
+
 
 
 
